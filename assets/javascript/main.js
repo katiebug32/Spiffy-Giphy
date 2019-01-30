@@ -12,7 +12,6 @@ function addNewGifButtons() {
     a.addClass("btn btn-info");
     a.attr("data-word", topics[i]);
     a.text(topics[i]);
-    // Adding the button to the buttons-view div
     $("#buttonDisplay").append(a);
   };
 };
@@ -20,6 +19,7 @@ function addNewGifButtons() {
 $("#searchField").on("click", "#searchButton", function (event) {
   event.preventDefault();
   var userInput = $("#searchText").val().trim();
+  //add new button as long as not a duplicate
   if ($.inArray(userInput, topics) === -1) {
     topics.push(userInput);
     console.log(topics);
