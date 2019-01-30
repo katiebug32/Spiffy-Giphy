@@ -35,9 +35,11 @@ $("#searchField").on("click", "#searchButton", function (event) {
 
 $("#buttonDisplay").on("click", ".btn", function (displayGIFS) {
   var searchWord = $(this).attr("data-word");
+
+  // offset is the api library item location 
   var currentOffset = offsets[searchWord];
   if(!currentOffset) {
-    currentOffset = 0;
+    currentOffset = 0; //sets the initial offset to zero, so ajax request will pull initial 1-10 gifs
   } 
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     searchWord + "&api_key=357L9jJO3KPSOgW5VmX72OQE2BTx6sIF&offset=" +currentOffset +"&limit=10";
@@ -48,8 +50,8 @@ $("#buttonDisplay").on("click", ".btn", function (displayGIFS) {
   }).then(function (response) {
     var results = response.data;
     console.log(results);
-    currentOffset = currentOffset + results.length;
-    offsets[searchWord] = currentOffset;
+    currentOffset = currentOffset + results.length; // sets new offset to 10, so next batch will be 11-20
+    offsets[searchWord] = currentOffset; //fills in my offsets object variable with searchWord as key & currentOffset as value. Now user can click the same button and get new gifs.
     for (var i = 0; i < results.length; i++) {
       var gifDiv = $("<div>");
 
@@ -66,28 +68,20 @@ $("#buttonDisplay").on("click", ".btn", function (displayGIFS) {
         gifDiv.append(gifImage);
 
         $("<p>").text("Rating: " + rating).appendTo(gifDiv);
-        $("<p>").text("Title: " + results[i].title).appendTo(gifDiv);
-        // $("<button>").text("Download").attr({
-        //   "id": "downloadButton",
-        //   "class": "btn btn-info",
-        //   "<a href": results[i].embed_url + "</a>"}).appendTo(gifDiv);
-          // $("#downloadButton").html("<a href=" + results[i].embed_url + "</a>");
-        // $("downloadButton").attr("a href=" + results[i].embed_url);
-        
+        $("<p>").text("Title: " + results[i].title).appendTo(gifDiv); 
 
         $("#gifDisplay").prepend(gifDiv);
-        $("#loadMore").css("display", "block");
+        // $("#loadMore").css("display", "block");
       };
     };
   });
 });
 
+//couldn't get this working quite yet. Same with download buttons for each gif. To be continued...
+// $("#loadMore").on("click", function(displayGIFS){
+// });
 
-$("#loadMore").on("click", function(displayGIFS){
-  
-});
-
-//gif is still or animates, based on click of gif//
+//gif is still or animated, based on click of gif//
 $("#gifDisplay").on("click", ".gif", function () {
   console.log("clicked");
   var state = $(this).attr("data-state");
