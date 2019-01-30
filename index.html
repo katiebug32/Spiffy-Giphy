@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spiffy Giphy GIF Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Kalam|Open+Sans|Shadows+Into+Light+Two" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <i class="far fa-grin-squint-tears"></i>
+        <h1 class="display-4">Spiffy Giphy</h1>
+        <i class="far fa-grimace"></i>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <h4>Click a button to find gifs!</h4>
+        <div class="col-sm-6" id="buttonDisplay"></div>
+        <div class="col-sm" id="searchDisplay">
+            <form id="searchField">
+                <h4 class="card-header">Add a new gif button:</h4>
+                <input id="searchText" type="text" value="">
+                <input class="btn btn-info" type="submit" value="Submit" id="searchButton">
+            </form>
+        </div>
+    </div>
+</div>
+    <br>
+    <div id="gifDisplay">
+    </div>
+    <button id="loadMore" class="btn btn-info">Load More...</button>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/main.js"></script>
+</body>
+
+</html>

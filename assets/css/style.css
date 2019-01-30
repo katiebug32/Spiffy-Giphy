@@ -1,0 +1,87 @@
+body {
+    background: rgb(65, 62, 62);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron {
+    background: lightcyan;
+    height: 17rem;
+    text-align: center;
+    font-size: 6rem;
+    margin: 0;
+    font-family: 'Architects Daughter', cursive;
+    padding: none;
+  
+}
+
+.display-4 {
+    display: inline;
+}
+
+#buttonDisplay {
+margin-left: 0;
+}
+
+
+.btn {
+    margin: .2rem;
+    font-size: 1.5rem;
+}
+
+#searchText {
+    /* margin-left: 2rem; */
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#gifDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0rem 2rem;
+}
+
+h4 {
+    color: white;
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+div {
+    margin: 2rem 2rem;
+    font-size: 1.5rem;
+}
+
+.card-header {
+    margin-top: 0;
+}
+p {
+    margin: .5rem 0rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+.gif {
+    margin: .5rem 0rem;
+    
+}
+
+#loadMore  {
+    display: none;
+    margin: 1rem, 1rem;
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 382px){
+    .jumbotron i {
+        display: none;
+       
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    body {
+        margin: 0;
+    }
+}
