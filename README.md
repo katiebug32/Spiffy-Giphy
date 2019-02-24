@@ -1,5 +1,5 @@
 # Spiffy-Giphy
-How are you feeling today? WAIT... Why answer that with words when you can use GIFs instead?!
+"How are you feeling today?" Why answer that with words when you can use GIFs instead?!
 
 Created using: JavaScript, jQuery, Bootstrap, gifphy.com API 
 
